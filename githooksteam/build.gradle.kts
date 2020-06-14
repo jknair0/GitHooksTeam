@@ -32,7 +32,7 @@ gradlePlugin {
 pluginBundle {
     website = "https://jknair.tech/"
     vcsUrl = "https://github.com/kjknair/GitHooksTeam"
-    tags = listOf("kotlin", "kotlin-dsl", "teams", "git-hooks", "gradle plugins")
+    tags = listOf("kotlin-dsl", "teams", "git", "git-hooks")
 }
 
 // Add a source set for the functional test suite
