@@ -23,7 +23,7 @@ class GitHooksTeamPluginFunctionalTest {
         projectDir.resolve("build.gradle.kts").writeText("""
             plugins {
                 id("java")
-                id("tech.jknair.githooksteam.git-hooks-team-plugin")
+                id("tech.jknair.githooksteam")
             }
         """.trimIndent())
 

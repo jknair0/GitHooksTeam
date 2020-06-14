@@ -14,7 +14,7 @@ class GitHooksTeamPluginTest {
     @Test fun `plugin registers task`() {
         // Create a test project and apply the plugin
         val project = ProjectBuilder.builder().build()
-        project.plugins.apply("tech.jknair.githooksteam.git-hooks-team-plugin")
+        project.plugins.apply("tech.jknair.githooksteam")
 
         // Verify the result
         assertNotNull(project.tasks.findByName(GitHooksTeamPlugin.TASK_NAME))

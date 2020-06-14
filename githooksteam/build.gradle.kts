@@ -6,6 +6,7 @@ plugins {
     `kotlin-dsl`
     `java-gradle-plugin`
     id("org.jetbrains.kotlin.jvm") version "1.3.70"
+    id("com.gradle.plugin-publish") version "0.10.1"
 }
 
 repositories {
@@ -22,10 +23,16 @@ dependencies {
 gradlePlugin {
     plugins {
         create("gitHooksTeam") {
-            id = "tech.jknair.githooksteam.git-hooks-team-plugin"
+            id = "tech.jknair.githooksteam"
             implementationClass = "tech.jknair.githooksteam.GitHooksTeamPlugin"
         }
     }
+}
+
+pluginBundle {
+    website = "https://jknair.tech/"
+    vcsUrl = "https://github.com/kjknair/GitHooksTeam"
+    tags = listOf("kotlin", "kotlin-dsl", "teams", "git-hooks", "gradle plugins")
 }
 
 // Add a source set for the functional test suite
