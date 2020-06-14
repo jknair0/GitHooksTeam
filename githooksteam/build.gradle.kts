@@ -23,6 +23,8 @@ dependencies {
 gradlePlugin {
     plugins {
         create("gitHooksTeam") {
+            displayName = "GitHooksTeam"
+            description = "Plugin to setup & share git hooks across java teams through VCS like every other config."
             id = "tech.jknair.githooksteam"
             implementationClass = "tech.jknair.githooksteam.GitHooksTeamPlugin"
         }
