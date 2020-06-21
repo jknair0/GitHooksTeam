@@ -36,3 +36,5 @@ gitHooksTeamPlugin {
     srcDir = "/* git hooks path here*/"
 }
 ```
+
+SetUp Reference: https://plugins.gradle.org/plugin/tech.jknair.githooksteam
