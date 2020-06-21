@@ -25,9 +25,9 @@ buildscript {
     classpath "gradle.plugin.tech.jknair.githooksteam:githooksteam:1.0.0-SNAPSHOT"
   }
 }
-```
 
-```apply plugin: "tech.jknair.githooksteam"```
+apply plugin: "tech.jknair.githooksteam"
+```
 
 In case you want to setup your own directory as githooks root add following setup to your module `build.gradle[.kts]` file.
 
