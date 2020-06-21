@@ -8,7 +8,7 @@
 Using the plugins DSL:
 ```
 plugins {
-  id "tech.jknair.githooksteam" version "1.0.0-SNAPSHOT"
+  id "tech.jknair.githooksteam" version "1.0.0"
 }
 ```
 
@@ -22,7 +22,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath "gradle.plugin.tech.jknair.githooksteam:githooksteam:1.0.0-SNAPSHOT"
+    classpath "gradle.plugin.tech.jknair.githooksteam:githooksteam:1.0.0"
   }
 }
 
@@ -33,7 +33,7 @@ In case you want to setup your own directory as githooks root add following setu
 
 ```
 gitHooksTeamPlugin {
-    srcDir = "/* git hooks path here*/"
+    srcDir = "/* git hooks path here eg: */"
 }
 ```
 
