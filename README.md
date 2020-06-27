@@ -8,7 +8,7 @@
 Using the plugins DSL:
 ```
 plugins {
-  id "tech.jknair.githooksteam" version "1.0.0"
+  id "tech.jknair.githooksteam" version "1.1.0"
 }
 ```
 
@@ -22,7 +22,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath "gradle.plugin.tech.jknair.githooksteam:githooksteam:1.0.0"
+    classpath "gradle.plugin.tech.jknair.githooksteam:githooksteamplugin:1.1.0"
   }
 }
 
