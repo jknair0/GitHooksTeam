@@ -9,7 +9,7 @@ import kotlin.test.Test
 import kotlin.test.assertTrue
 
 /**
- * A simple functional test for the 'tech.jknair.githooksteam.greeting' plugin.
+ * A simple functional test for the 'tech.jknair.githooksteam' plugin.
  */
 class GitHooksTeamPluginFunctionalTest {
     @Test fun `can run task`() {
@@ -34,10 +34,6 @@ class GitHooksTeamPluginFunctionalTest {
         runner.withArguments("build")
         runner.withProjectDir(projectDir)
         val result = runner.build();
-
-        println("------------------------------------------------------------")
-        println(result.output)
-        println("------------------------------------------------------------")
 
         // Verify the result
         assertTrue(result.output.contains("setUpGitHooks"))
