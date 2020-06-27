@@ -15,7 +15,7 @@ open class GitHooksTeamPlugin : Plugin<Project> {
             from(srcDir)
             into(destDir)
             doLast {
-                logger.debug("copied hooks from $srcDir to $destDir")
+                logger.info("copied hooks from $srcDir to $destDir")
                 createAddFileExecPermissionTask(project, destDir)
             }
         }

@@ -11,7 +11,8 @@ import kotlin.test.assertNotNull
  * A simple unit test for the 'tech.jknair.githooksteam.greeting' plugin.
  */
 class GitHooksTeamPluginTest {
-    @Test fun `plugin registers task`() {
+    @Test
+    fun `plugin registers task`() {
         // Create a test project and apply the plugin
         val project = ProjectBuilder.builder().build()
         project.plugins.apply("tech.jknair.githooksteam")
