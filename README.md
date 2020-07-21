@@ -5,14 +5,7 @@
 
 ## Setup
 
-Using the plugins DSL:
-```
-plugins {
-  id "tech.jknair.githooksteam" version "1.1.0"
-}
-```
-
-Using legacy plugin application:
+Using legacy plugin application is Recommended:
 
 ```
 buildscript {
