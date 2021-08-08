@@ -16,7 +16,10 @@ jobs:
   test-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set executable permission gradlew
+        run: chmod +x ./gradlew
       - name: Run gradle checks
         run: ./gradlew check
       - name: Extract version from tag
