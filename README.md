@@ -1,13 +1,20 @@
 # GitHooksTeam
 
-* A Gradle Plugin which helps share and setup git hooks. The default githooks directory is `${projectRootDirectory}/.githooks`.
-* The team can share githooks across team using git VCS by leaving the burden of setUp to GitHooksTeam Plugin.
+* Gradle Plugin that helps you automate setting up git hooks.
+* Using a folder not associated with `.git` helps you share setup with your team on VCS.
 
 ## Setup
 
-Using legacy plugin application is Recommended:
-
+Using the plugins DSL:
+```groovy
+plugins {
+  id "tech.jknair.githooksteam" version "1.2.0"
+}
 ```
+
+Using legacy plugin:
+
+```groovy
 buildscript {
   repositories {
     maven {
@@ -15,22 +22,30 @@ buildscript {
     }
   }
   dependencies {
-    classpath "gradle.plugin.tech.jknair.githooksteam:githooksteamplugin:1.1.0"
+    classpath "gradle.plugin.tech.jknair.githooksteam:githooksteamplugin:1.2.0"
   }
 }
 
 apply plugin: "tech.jknair.githooksteam"
 ```
 
-In case you want to setup your own directory as githooks root add following setup to your module `build.gradle[.kts]` file.
 
-```
+
+## Setup hooks path (Optional)
+
+By default plugin takes `${project.rootDir}/.githooks` as hooks directory.
+
+You can setup your custom path as follows:
+
+build.gradle[.kts]
+
+```groovy
 gitHooksTeamPlugin {
-    srcDir = "/* git hooks path here eg: */"
+    srcDir = "your custom path here"
 }
 ```
 
-SetUp Reference: https://plugins.gradle.org/plugin/tech.jknair.githooksteam
+Plugin set up reference: https://plugins.gradle.org/plugin/tech.jknair.githooksteam
 
 ## License
 ```
