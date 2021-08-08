@@ -3,6 +3,9 @@
 * Gradle Plugin that helps you automate setting up git hooks.
 * Using a folder not associated with `.git` helps you share setup with your team on VCS.
 
+![](https://github.com/jknair0/GitHooksTeam/actions/workflows/test-deploy.yml/badge.svg) 
+[![](https://img.shields.io/static/v1?label=gradle-portal&message=v1.2.0&color=green)](https://plugins.gradle.org/plugin/tech.jknair.githooksteam)
+
 ## Setup
 
 Using the plugins DSL:
