@@ -14,7 +14,7 @@ import kotlin.test.assertTrue
 class GitHooksTeamPluginFunctionalTest {
 
     @Test
-    fun `can run task`() {
+    fun setsGitHooksCorrectly() {
         // Setup the test build
         val projectDir = File("build/functionalTest")
         projectDir.mkdirs()
@@ -33,12 +33,15 @@ class GitHooksTeamPluginFunctionalTest {
         val runner = GradleRunner.create()
         runner.forwardOutput()
         runner.withPluginClasspath()
-        runner.withArguments("build")
+        runner.withArguments("assemble")
         runner.withProjectDir(projectDir)
+        @Suppress("UNUSED_VARIABLE")
         val result = runner.build()
 
         // Verify the result
-        assertTrue(result.output.contains("setUpGitHooks"))
+        assertTrue(projectDir.resolve(".git/hooks").exists(), ".git/hooks does not exist")
+        assertTrue(projectDir.resolve(".git/hooks/sample").exists(), ".git/hooks/sample file does not exit")
+        assertTrue(projectDir.resolve(".git/hooks/sample").canExecute(), ".git/hooks/sample does not have execute permission")
     }
 
 }

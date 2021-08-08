@@ -1,5 +1,5 @@
 group = "tech.jknair.githooksteam"
-version = "1.1.0"
+version = "1.2.0"
 
 
 plugins {
@@ -24,7 +24,7 @@ gradlePlugin {
     plugins {
         create("gitHooksTeam") {
             displayName = "GitHooksTeam"
-            description = "Automate the setup of git hooks that are shared across the team through VCS"
+            description = "Automate the setup of git hooks as part of lifecycle with the source shared through VCS using Gradle"
             id = "tech.jknair.githooksteam"
             implementationClass = "tech.jknair.githooksteam.GitHooksTeamPlugin"
         }
@@ -34,7 +34,7 @@ gradlePlugin {
 pluginBundle {
     website = "https://jknair.tech/"
     vcsUrl = "https://github.com/kjknair/GitHooksTeam"
-    tags = listOf("git", "hooks", "java", "team")
+    tags = listOf("git", "hooks", "gradle")
 }
 
 // Add a source set for the functional test suite
